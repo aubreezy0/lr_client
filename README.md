@@ -1,5 +1,12 @@
 # Lunchbx - Client
 
+Of note, a followup to Lunchbx, "Lunchbox Roulette" is in the works.
+Follow along at
+<ul>
+<li>https://github.com/aubreezy0/lr_client and</li>
+<li>https://github.com/aubreezy0/lr_api</li>
+</ul>
+
 ## Repos
 <ul>
 <li>Front End: https://github.com/aubreezy0/lunchbx-client</li>
