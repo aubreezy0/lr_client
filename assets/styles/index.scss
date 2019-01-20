@@ -9,6 +9,11 @@ $white: #fff;
 $grey: rgb(128, 128, 128);
 $teal: rgb(0, 156, 161);
 $black: #000;
+$plum: rgb(153, 16, 72);
+$raspberry: rgb(242, 31, 76);
+$lime: rgb(192, 202, 77);
+$lt-blue: rgb(94, 187, 221);
+$olive: rgb(138, 182, 157);
 $border-color: #333;
 
 input {
@@ -24,8 +29,8 @@ p {
 }
 
 body {
-  // background-color: $background-color;
-  background: url('../../assets/images/pink-lunchbox2.jpg');
+  background-color: $background-color;
+  // background: url('../../assets/images/pink-lunchbox2.jpg');
   background-size: cover;
   color: $font-color;
   margin-bottom: 100px;
