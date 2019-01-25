@@ -2,9 +2,12 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
-$background-color: #f2e1f7;
-$button-color: #555;
+$background-color: #fff;
+$button-color: #f2564c;
 $font-color: #000;
+$navbar-color: #8ab69d;
+// $navbar-height: 100px;
+
 $white: #fff;
 $grey: rgb(128, 128, 128);
 $teal: rgb(0, 156, 161);
@@ -72,6 +75,21 @@ hr {
   color: $white;
   margin: 5px 10px;
   padding: 5px 10px;
+}
+
+.navbar {
+  position: relative;
+  min-height: $navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
+  margin-bottom: $navbar-margin-bottom;
+  border: 1px solid transparent;
+  background: $navbar-color;
+
+  // Prevent floats from breaking the navbar
+  @include clearfix;
+
+  @media (min-width: $grid-float-breakpoint) {
+    border-radius: $navbar-border-radius;
+  }
 }
 
 .noclick {
