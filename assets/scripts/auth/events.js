@@ -9,8 +9,7 @@ const onSignUp = function (event) {
   // console.log(data)
   api.signUp(data)
     .then(ui.signUpSuccess)
-    // I believe this is what creates the auto advance
-    // .then(() => { signInNoEvent(data) })
+    .then(() => { signInNoEvent(data) })
     .catch(ui.signUpFailure)
 }
 
@@ -21,6 +20,12 @@ const onSignIn = function (event) {
     .then(ui.signInSuccess)
     // I believe this is what creates the auto advance
     // .then(() => { fileEvents.onGetFileUploadNoEvent() })
+    .catch(ui.signInFailure)
+}
+
+const signInNoEvent = function (data) {
+  api.signIn(data)
+    .then(ui.signInSuccess)
     .catch(ui.signInFailure)
 }
 

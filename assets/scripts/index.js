@@ -27,7 +27,6 @@ $(() => {
   authEvents.addHandlers()
   restaurantEvents.addHandlers()
   $('body').prepend(navHTML)
-  // // $('body').prepend(navHTML)
   // $('body').append(homePageHTML)
   // $('body').on('click', '.nav-tabs a', function (e) {
   //   e.preventDefault()

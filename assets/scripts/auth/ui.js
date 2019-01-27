@@ -4,7 +4,6 @@ const store = require('../store')
 // const signUpTemplate = require('../templates/sign-up.handlebars')
 // const signInTemplate = require('../templates/sign-in.handlebars')
 // const changePasswordTemplate = require('../templates/change-password.handlebars')
-// const signOutTemplate = require('../templates/sign-out.handlebars')
 
 const signUpSuccess = function () {
   // console.log('from signUpSuccess')

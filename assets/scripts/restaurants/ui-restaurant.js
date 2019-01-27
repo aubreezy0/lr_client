@@ -130,6 +130,10 @@ const pickRestaurantFailure = function () {
 //   )
 }
 
+const onCloseListSuccess = function () {
+  $('#show').html('')
+  $('#no-show').html('')
+}
 module.exports = {
   addRestaurantSuccess,
   addRestaurantFailure,
