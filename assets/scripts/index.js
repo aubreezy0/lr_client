@@ -10,8 +10,8 @@ const authEvents = require('./auth/events')
 const restaurantEvents = require('./restaurants/events-restaurant')
 // const fileUploadEvents = require('./fileupload/fileuploadevents')
 
-// const navHandlebars = require('./templates/nav.handlebars')
-// const navHTML = navHandlebars()
+const navHandlebars = require('./templates/nav.handlebars')
+const navHTML = navHandlebars()
 
 // const homePageHandlebars = require('./templates/homepage.handlebars')
 // const homePageHTML = homePageHandlebars()
@@ -19,10 +19,14 @@ const restaurantEvents = require('./restaurants/events-restaurant')
 // const footerHandlebars = require('./templates/footer.handlebars')
 // const footerHTML = footerHandlebars()
 
+const footerHandlebars = require('./templates/footer.handlebars')
+const footerHTML = footerHandlebars()
+
 $(() => {
   // your JS code goes here
   authEvents.addHandlers()
   restaurantEvents.addHandlers()
+  $('body').prepend(navHTML)
   // // $('body').prepend(navHTML)
   // $('body').append(homePageHTML)
   // $('body').on('click', '.nav-tabs a', function (e) {
@@ -30,5 +34,5 @@ $(() => {
   //   $(this).tab('show')
   // })
   // $('.navbar').remove()
-  // $('body').append(footerHTML)
+  $('body').append(footerHTML)
 })

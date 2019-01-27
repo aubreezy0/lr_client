@@ -11,17 +11,30 @@
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body>
-      <div class="navbar">Hi!</div>
+
+      <style>
+  /* Always set the map height explicitly to define the size of the div
+   * element that contains the map. */
+  #map {
+    height: 480px;
+    width: 480px;
+    margin: 25px;
+  }
+
+</style>
+</head>
+<body>
+
+    <p id="message"></p>
+
+
       <h1>Hangry? Let's go for a Spin!!</h1>
-            <p id="message"></p>
       <h2 data-id="" class="sign-up">Sign Up</h2>
 
       <form class="sign-up">
         <fieldset>
+          <input type="text" name="credentials[display_name]" autocomplete="display-name" placeholder="Your Name" required>
           <input type="email" name="credentials[email]" autocomplete="email" placeholder="Email" required>
-          <input type="text" name="credentials[display_name]" autocomplete="display-name" placeholder="Display Name" required>
           <input type="password" name="credentials[password]" autocomplete="password" placeholder="Password" required>
           <input type="password" name="credentials[password_confirmation]" autocomplete="password"  placeholder="Password Confirmation" required>
           <input class="button" type="submit" value="Sign up!">
@@ -50,7 +63,19 @@
       </form>
 
 
-      <h2 data-id="" class="show-restaurants">Show Restaurants</h2>
+      <h2 data-id="" class="show-restaurants">Show Restaurants Near You</h2>
+      <div id="map"></div> -->
+      <script>
+        let map;
+        function initMap() {
+          map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: -34.397, lng: 150.644},
+            zoom: 8
+          });
+        }
+      </script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnkKb4cz09qDfhKX5ivE03LnI_xkDfNac&callback=initMap"
+      async defer></script>
 
       <form class="show-restaurants">
         <fieldset>
