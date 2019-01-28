@@ -2,15 +2,29 @@
   Magic Lunch Ball
 <button type="button" class="hidden sign-out btn btn-default navbar-btn navbar-right">Sign Out</button>
 
+<button type="button" class="hidden change-password btn btn-default navbar-btn navbar-right" data-toggle="modal" data-target="#changePasswordModal"> Change Password</button>
+
+<!-- Change Password Modal-->
+<div id="changePasswordModal" class="modal">
+
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 data-id="" class="change-password">Change Password</h2>
+    <form class="change-password">
+      <fieldset>
+        <input type="password" name="passwords[old]" autocomplete="password" placeholder="Old Password" required>
+        <input type="password" name="passwords[new]" autocomplete="password" placeholder="New Password" required>
+        <input class="button" type="submit" value="Update Password">
+      </fieldset>
+    </form>
+  </div>
+</div>
+
 <button type="button" class="sign-in btn btn-default navbar-btn navbar-right" data-toggle="modal" data-target="#signInModal"> Sign In</button>
 
-<!-- Trigger/Open The Modal -->
-<!-- <button id="myBtn">Open Modal</button> -->
-
-<!-- The Modal -->
+<!-- Sign In Modal-->
 <div id="signInModal" class="modal">
 
-  <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
     <h2 data-id="" class="sign-in">Sign In</h2>
@@ -30,10 +44,9 @@
 <!-- Trigger/Open The Modal -->
 <!-- <button id="myBtn">Open Modal</button> -->
 
-<!-- The Modal -->
+<!-- Sign Up Modal -->
 <div id="signUpModal" class="modal">
 
-  <!-- Modal content -->
   <div class="modal-content">
     <span class="close">&times;</span>
     <h2 data-id="" class="sign-up">Sign Up</h2>
@@ -49,5 +62,20 @@
     </form>
   </div>
 </div>
+
+<!--Change Password Modal-->
+<div id="changePasswordModal" class="modal">
+
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 data-id="" class="change-password">Change Password</h2>
+
+    <form class="change-password">
+      <fieldset>
+        <input type="password" name="passwords[old]" autocomplete="password" placeholder="Old Password" required>
+        <input type="password" name="passwords[new]" autocomplete="password" placeholder="New Password" required>
+        <input class="button" type="submit" value="Update Password">
+      </fieldset>
+    </form>
 
 </nav class="navbar">

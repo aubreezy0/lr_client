@@ -38,6 +38,7 @@ const signInSuccess = function (data) {
   $('.sign-up').addClass('hidden')
   $('.sign-in').addClass('hidden')
   $('.sign-out').removeClass('hidden')
+  $('.change-password').removeClass('hidden')
 
   $('.lunch-stuff').removeClass('hidden')
   store.user = data.user
@@ -58,6 +59,7 @@ const signInFailure = function () {
 }
 
 const changePasswordSuccess = function () {
+  $('.modal').modal('hide')
   $('#message').html(`<div class="alert alert-success" role="alert">You have succesfully changed your password!</div>`)
   $('#message').css('text-align', 'center')
   $('form').trigger('reset')
@@ -68,6 +70,7 @@ const changePasswordSuccess = function () {
 }
 
 const changePasswordFailure = function () {
+  $('.modal').modal('hide')
   $('#message').html(`<div class="alert alert-danger" role="alert">Failed to change password</div>`)
   $('#message').css('text-align', 'center')
   $('form').trigger('reset')
@@ -90,6 +93,7 @@ const signOutSuccess = function (data) {
   $('.sign-up').removeClass('hidden')
   $('.sign-in').removeClass('hidden')
   $('.sign-out').addClass('hidden')
+  $('.change-password').addClass('hidden')
   $('.lunch-stuff').addClass('hidden')
   store.user = null
 }
