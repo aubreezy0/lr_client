@@ -1,4 +1,53 @@
 <nav class="navbar">
-  Hi
-<button type="button" class="sign-out btn btn-default navbar-btn navbar-right">Sign Out</button>
+  Magic Lunch Ball
+<button type="button" class="hidden sign-out btn btn-default navbar-btn navbar-right">Sign Out</button>
+
+<button type="button" class="sign-in btn btn-default navbar-btn navbar-right" data-toggle="modal" data-target="#signInModal"> Sign In</button>
+
+<!-- Trigger/Open The Modal -->
+<!-- <button id="myBtn">Open Modal</button> -->
+
+<!-- The Modal -->
+<div id="signInModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 data-id="" class="sign-in">Sign In</h2>
+
+    <form class="sign-in">
+      <fieldset>
+        <input type="email" name="credentials[email]" autocomplete="email" placeholder="Email" required>
+        <input type="password" name="credentials[password]" autocomplete="password" placeholder="Password" required>
+        <input class="button" type="submit" value="Sign In!">
+      </fieldset>
+    </form>
+  </div>
+</div>
+
+<button type="button" class="sign-up btn btn-default navbar-btn navbar-right" data-toggle="modal" data-target="#signUpModal"> Sign Up</button>
+
+<!-- Trigger/Open The Modal -->
+<!-- <button id="myBtn">Open Modal</button> -->
+
+<!-- The Modal -->
+<div id="signUpModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 data-id="" class="sign-up">Sign Up</h2>
+
+    <form class="sign-up">
+      <fieldset>
+        <input type="text" name="credentials[display_name]" autocomplete="display-name" placeholder="Your Name" required>
+        <input type="email" name="credentials[email]" autocomplete="email" placeholder="Email" required>
+        <input type="password" name="credentials[password]" autocomplete="password" placeholder="Password" required>
+        <input type="password" name="credentials[password_confirmation]" autocomplete="password"  placeholder="Password Confirmation" required>
+        <input class="button" type="submit" value="Sign up!">
+      </fieldset>
+    </form>
+  </div>
+</div>
+
 </nav class="navbar">

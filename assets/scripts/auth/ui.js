@@ -36,6 +36,8 @@ const signInSuccess = function (data) {
   }, 10000)
   $('.sign-up').addClass('hidden')
   $('.sign-in').addClass('hidden')
+  $('.sign-out').removeClass('hidden')
+
   $('.lunch-stuff').removeClass('hidden')
   store.user = data.user
   // store.user = data.user
@@ -85,6 +87,7 @@ const signOutSuccess = function (data) {
   )
   $('.sign-up').removeClass('hidden')
   $('.sign-in').removeClass('hidden')
+  $('.sign-out').addClass('hidden')
   $('.lunch-stuff').addClass('hidden')
   store.user = null
 }
