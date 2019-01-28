@@ -17,7 +17,8 @@ const signUpSuccess = function () {
 }
 
 const signUpFailure = function () {
-  $('#message').html(`<div class="alert alert-danger" role="alert">You have failed to sign up!<br>Your username or email may be already registered.</div>`)
+  $('.modal').modal('hide')
+  $('#message').html(`<div class="alert alert-danger" role="alert">OH NO! What did you do?! Clearly you did <em>something</em> wrong. Maybe you're already a user? Did your passwords match? Easy mistakes, we still like you. <br>Try again!</div>`)
   $('#message').css('text-align', 'center')
   $('form').trigger('reset')
   setTimeout(() => {
@@ -46,7 +47,8 @@ const signInSuccess = function (data) {
 }
 
 const signInFailure = function () {
-  $('#message').html(`<div class="alert alert-danger" role="alert">You have failed sign in!</div>`)
+  $('.modal').modal('hide')
+  $('#message').html(`<div class="alert alert-danger" role="alert">Whoops! That didn't work. Please try to Sign In again, or if you aren't already a lucky member of the Magic Lunch Ball clique, go ahead and Sign Up!</div>`)
   $('#message').css('text-align', 'center')
   $('form').trigger('reset')
   setTimeout(() => {
