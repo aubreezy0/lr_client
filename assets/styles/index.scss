@@ -70,6 +70,14 @@ hr {
   padding: 3px 5px;
 }
 
+.navbar-btn {
+  background: $button-color;
+  border: 1px solid $border-color;
+  color: $white;
+  margin: 5px 10px 5px 10px;
+  padding: 5px 10px 5px 10px;
+}
+
 .remove-button {
   background: $button-color;
   border: 1px solid $border-color;
@@ -84,6 +92,7 @@ hr {
   margin-bottom: $navbar-margin-bottom;
   border: 1px solid transparent;
   background: $navbar-color;
+  padding: 5px 10px;
 
   // Prevent floats from breaking the navbar
   @include clearfix;
@@ -117,4 +126,10 @@ hr {
 
 .hover {
   opacity: 0.8;
+}
+
+.map {
+  height: 480px;
+  width: 480px;
+  margin: 0 auto;
 }
