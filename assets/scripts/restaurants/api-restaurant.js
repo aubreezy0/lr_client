@@ -53,23 +53,23 @@ const showRestaurants = function (data) {
   })
 }
 
-// For eventual randomizer -- update!
-const pickRestaurant = function (data) {
-  // return $.ajax({
-  //   url: config.apiUrl + '/restaurants',
-  //   headers: {
-  //     contentType: 'application/json',
-  //     Authorization: 'Token token=' + store.user.token
-  //   },
-  //   method: 'GET',
-  //   data
-  // })
-}
+// For eventual randomizer update!
+// const pickRestaurant = function (data) {
+// return $.ajax({
+//   url: config.apiUrl + '/restaurants',
+//   headers: {
+//     contentType: 'application/json',
+//     Authorization: 'Token token=' + store.user.token
+//   },
+//   method: 'GET',
+//   data
+// })
+// }
 
 module.exports = {
   addRestaurant,
   updateRestaurant,
   deleteRestaurant,
-  showRestaurants,
-  pickRestaurant
+  showRestaurants
+  // pickRestaurant
 }

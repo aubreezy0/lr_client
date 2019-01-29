@@ -1,0 +1,45 @@
+
+<!-- This is showRestaurantsTemplate-->
+
+{{#each restaurants as |restaurant|}}
+<!--randomizer at bottom-->
+
+  <h1 data-id="{{restaurant.id}}" class="show-restaurants">
+  </h1>
+
+<div class="google-results"
+  <div data-id="{{restaurant.id}}">
+      {{#if restaurant.restaurant_name}}
+        <h3>{{restaurant.restaurant_name}}</h3>
+      {{else}}
+        NO SOUP FOR YOU!
+      {{/if}}
+  </div>
+
+  <div>
+      Cuisine:
+      {{#if restaurant.cuisine}}
+        {{restaurant.cuisine}}
+      {{else}}
+        It's a surprise!
+      {{/if}}
+  </div>
+  <!-- location details -->
+  <!-- add to favorites button if signed in -->
+</div>
+{{/each}}
+
+
+<!--<button onclick="shakeBall()">Shake Me</button>
+
+<p id="message"></p>
+
+<script>
+let results = [40, "results_here", 1, 5, 25, 10];
+document.getElementById("message").innerHTML = results;
+
+function shakeBall() {
+  results.sort(function(a, b){return 0.5 - Math.random()});
+  document.getElementById("message").innerHTML = results;
+}
+</script>-->

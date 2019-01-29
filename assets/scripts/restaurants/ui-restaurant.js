@@ -1,6 +1,27 @@
 'use strict'
 // const store = require('../store')
-const showRestaurantsTemplate = require('../templates/restaurant/mvp-show-restaurants.handlebars')
+const showRestaurantsTemplate = require('../templates/restaurant/results.handlebars')
+
+const showRestaurantsSuccess = function (data) {
+  const showRestaurantsHtml = showRestaurantsTemplate({ restaurants: data.restaurants })
+  // console.log(data)
+  $('#no-show').html('')
+  $('#show').html('').append(showRestaurantsHtml)
+  if (data.restaurants.length === 0) {
+    $('#no-show').html('Nothing here yet. Add a restaurant to your collection to get started!')
+  }
+}
+
+const showRestaurantsFailure = function () {
+  $('#message').html(`<div class="alert alert-danger" role="alert"> Nothing to look at here.</div>`)
+  $('#message').css('text-align', 'center')
+  $('form').trigger('reset')
+  $('#no-show').html('')
+  setTimeout(() => {
+    $('#message').html('')
+  }, 10000
+  )
+}
 
 const addRestaurantSuccess = function (data) {
   // console.log(data)
@@ -80,27 +101,6 @@ const deleteRestaurantFailure = function () {
     $('#show').html('')
   }, 50
   )
-  setTimeout(() => {
-    $('#message').html('')
-  }, 10000
-  )
-}
-
-const showRestaurantsSuccess = function (data) {
-  const showRestaurantsHtml = showRestaurantsTemplate({ restaurants: data.restaurants })
-  // console.log(data)
-  $('#no-show').html('')
-  $('#show').html('').append(showRestaurantsHtml)
-  if (data.restaurants.length === 0) {
-    $('#no-show').html('Nothing here yet. Add a restaurant to your collection to get started!')
-  }
-}
-
-const showRestaurantsFailure = function () {
-  $('#message').html(`<div class="alert alert-danger" role="alert"> Nothing to look at here.</div>`)
-  $('#message').css('text-align', 'center')
-  $('form').trigger('reset')
-  $('#no-show').html('')
   setTimeout(() => {
     $('#message').html('')
   }, 10000

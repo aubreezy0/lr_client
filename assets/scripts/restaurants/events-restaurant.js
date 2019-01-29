@@ -4,6 +4,31 @@ const getFormFields = require('../../../lib/get-form-fields')
 const ui = require('./ui-restaurant')
 const api = require('./api-restaurant')
 
+const onShowRestaurants = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.showRestaurants(data)
+    .then(ui.showRestaurantsSuccess)
+    .catch(ui.showRestaurantsFailure)
+}
+
+const onCloseList = function (event) {
+  // console.log('clicked')
+  event.preventDefault()
+  $('#show').html('')
+  $('#no-show').html('')
+}
+
+// For eventual randomizer
+const onPickRestaurant = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  api.pickRestaurant(data)
+    .then(ui.pickRestaurantSuccess)
+    .catch(ui.pickRestaurantFailure)
+}
+
+// this will be add to favorites
 const onAddRestaurant = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
@@ -32,29 +57,7 @@ const onDeleteRestaurant = function (event) {
     .catch(ui.deleteRestaurantFailure)
 }
 
-const onShowRestaurants = function (event) {
-  event.preventDefault()
-  const data = getFormFields(event.target)
-  api.showRestaurants(data)
-    .then(ui.showRestaurantsSuccess)
-    .catch(ui.showRestaurantsFailure)
-}
 
-const onCloseList = function (event) {
-  // console.log('clicked')
-  event.preventDefault()
-  $('#show').html('')
-  $('#no-show').html('')
-}
-
-// For eventual randomizer
-const onPickRestaurant = function (event) {
-  event.preventDefault()
-  const data = getFormFields(event.target)
-  api.pickRestaurant(data)
-    .then(ui.pickRestaurantSuccess)
-    .catch(ui.pickRestaurantFailure)
-}
 
 const addHandlers = () => {
   $('body').on('submit', '.add-restaurant', onAddRestaurant)

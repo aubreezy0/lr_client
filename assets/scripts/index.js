@@ -7,8 +7,8 @@
 // require('./example')
 
 const authEvents = require('./auth/events')
+
 const restaurantEvents = require('./restaurants/events-restaurant')
-// const fileUploadEvents = require('./fileupload/fileuploadevents')
 
 const navHandlebars = require('./templates/nav.handlebars')
 const navHTML = navHandlebars()
