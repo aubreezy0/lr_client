@@ -14,14 +14,10 @@ In the meantime you can follow along at:
 
 Thank you!
 
-## README from V1 iteration, "Lunchbx" (Not Magic Lunch Ball)
+# README from V1 iteration, "Lunchbx" (Not Magic Lunch Ball)
 
- (The notes below are from the original concept for this site,
+## Repos (Not Magic Lunch Ball)
 
-Of note, a followup to Lunchbx, "Lunchbox Roulette" is in the works.
-
-
-## Repos (for Lunchbx, see above for Magic Lunch Ball)
 <ul>
 <li>Front End: https://github.com/aubreezy0/lunchbx-client</li>
 <li>Back End: https://github.com/aubreezy0/lunchbx-api</li>
